@@ -2,12 +2,3 @@
 ---
 
 @import "{{ site.theme }}";
-body {
-  header {
-    width:200px;
-    float:left;
-    position:fixed;
-    -webkit-font-smoothing:subpixel-antialiased;
-  }
-
-}

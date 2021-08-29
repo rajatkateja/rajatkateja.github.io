@@ -34,7 +34,7 @@ logo: /images/rkateja.png
 
 # Build settings
 #theme: minimal
-remote_theme: pages-themes/minimal
+remote_theme: pages-themes/cayman
 plugins:
 #  - jekyll-feed
   - jekyll-remote-theme

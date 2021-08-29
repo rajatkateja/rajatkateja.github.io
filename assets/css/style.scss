@@ -1,9 +1,19 @@
 ---
 ---
+$header-heading-color: #069 !default;
+$header-bg-color: #fff !default;
+$header-bg-color-secondary: #fff !default;
+
+// Text
+$section-headings-color: #069 !default;
+$body-text-color: black !default;
+$body-link-color: #069 !default;
+$blockquote-text-color: #819198 !default;
+
 
 @import "{{ site.theme }}";
 body {
-  h1 {
-    font-size:32px;
+  .page-header {
+    text-align: left;
   }
 }

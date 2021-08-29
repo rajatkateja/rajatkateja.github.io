@@ -16,13 +16,16 @@
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
+      <!--
       {% if site.logo %}
-        <img src="{{site.logo | relative_url}}" alt="Logo" style="float:left;width:10%"/>
+        <img src="{{site.logo | relative_url}}" alt="Logo" style="float:center;width:10%"/>
       {% endif %}
-      <div style="padding-left:15%">
+      -->
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      </div>
+      <a href="https://groups.google.com/g/afterhoursacademic-subscribers" class="btn">Subscribe on Google Groups</a>
+      <a href="https://twitter.com/rajatkateja" class="btn">Follow on Twitter</a>
+      <a href="https://linkedin.com/in/rajatkateja" class="btn">Follow on LinkedIn</a>
       <!---
       {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>

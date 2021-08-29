@@ -2,3 +2,8 @@
 ---
 
 @import "{{ site.theme }}";
+body {
+  h1 {
+    font-size:32px;
+  }
+}

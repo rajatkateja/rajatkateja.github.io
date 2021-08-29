@@ -10,6 +10,7 @@ $body-text-color: black !default;
 $body-link-color: #069 !default;
 $blockquote-text-color: #819198 !default;
 
+$hr-border-color: #069;
 
 @import "{{ site.theme }}";
 body {

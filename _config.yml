@@ -26,7 +26,7 @@ email: afterhoursacademic@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
         Summaries of computer science research papers 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://afterhoursacademic.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rajatkateja
 #github_username:  jekyll
 logo: /images/rkateja.png

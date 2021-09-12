@@ -1,1 +1,7 @@
 *.swp
+_site/
+_site/*
+.jekyll-cache
+.jekyll-metadata
+Gemfile.lock
+Gemfile

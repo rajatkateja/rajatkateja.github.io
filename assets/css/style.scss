@@ -24,15 +24,32 @@ body {
 	.page-header {
 		text-align: center;
 		@include large {
-			padding: 2rem 6rem;
+			padding: 0.25rem 6rem;
 		}
 
 		@include medium {
-			padding: 2rem 4rem;
+			padding: 0.25rem 4rem;
 		}
 
 		@include small {
 			padding: 2rem 1rem;
+		}
+	}
+	.project-tagline {
+		margin-bottom: 0.1rem;
+		font-weight: normal;
+		opacity: 0.7;
+
+		@include large {
+			font-size: 1.25rem;
+		}
+
+		@include medium {
+			font-size: 1.15rem;
+		}
+
+		@include small {
+			font-size: 1rem;
 		}
 	}
 	.btn {

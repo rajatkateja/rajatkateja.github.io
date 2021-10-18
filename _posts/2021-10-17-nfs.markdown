@@ -97,7 +97,7 @@ the file pointer. In this example, the file system stores (at least) two pieces
 of information as state -- the mapping of the file description to the file, and
 the file pointer storing the offset within the file. This is because if the
 file system were to restart for some reason, it would need this information to
-be able to server future requests from the application -- the application would
+be able to serve future requests from the application -- the application would
 only specify the file descriptor and it would be up to the file system to
 recognize the file and the offset to read/write from/to the file. 
 

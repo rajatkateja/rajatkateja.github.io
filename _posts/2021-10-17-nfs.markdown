@@ -220,7 +220,7 @@ surprise!) an attribute cache to store the last updated time for each file on
 the client. The client-side file system checks the attribute cache before
 contacting the file server. Although the attribute cache reduces the number of
 requests to the file server, it leads to rather unpredictable behaviour --
-since each attribute cache entry as a time to live (TTL), applications could
+as each attribute cache entry has a time to live (TTL), applications could
 get old data rather arbitrarily depending on the TTL. 
 
 **Concluding thoughts:** NFS, as an example of an early distributed file

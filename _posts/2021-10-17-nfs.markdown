@@ -44,7 +44,8 @@ their adoption.
 
 <figure class="caption"> <img src="{{site.url}}/images/distfs-arch.png"/>
 <figcaption>Another figure from the chapter that describes how a distributed file 
-system is actually composed of a client-side and a server-side file system.
+system is actually composed of a client-side and a server-side file system to provide 
+transparent access to client applications.
 </figcaption> </figure>
 
 To enable transparent access to data from a distributed file system, NFS (and
@@ -59,7 +60,7 @@ vendors to implement their distributed file systems. The cross-vendor
 interoperability, thanks to the open protocol, was one of the reasons for NFS’s
 success and wide adoption. 
 
-**NFS’s design goals:** The main goal for NFS designer’s was to have fast and
+**NFS’s design goal:** The main goal for NFS designer’s was to have fast and
 simple crash recovery for the file server. This is a meaningful goal because a
 server failure makes the filesystem unusable for all the clients, in contrast
 to a client failure that only affects the client. 

@@ -151,7 +151,7 @@ you do it twice you get ‘baa’.
 <figure class="caption"> <img src="{{site.url}}/images/distsys-failure-modes.png"/>
 <figcaption>This figure from the chapter shows three different failure modes -- 
 network failure causing a request packet loss, server failure, and network 
-failure causing a response (acknowdledgement) packet loss. Idempotent operations offer a 
+failure causing a response (acknowledgement) packet loss. Idempotent operations offer a 
 simple solution to handle either of these failure -- retry the request if 
 it has not been acknowledged as successfully completed. 
 </figcaption> </figure>

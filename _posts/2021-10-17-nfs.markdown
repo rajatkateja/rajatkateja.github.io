@@ -34,7 +34,7 @@ different aspect than administration, but I consider it to be a subset of
 administration in general).
 
 A primary requirement for any distributed file system (like NFS) is to make its
-use transparent to applications. Transparency implies that the client
+usage transparent to applications. Transparency implies that the client
 applications’ should be able to access data from the distributed file system in
 the same way as they access it from their local file system. One way to think
 about the requirement is that local file systems (and applications using local

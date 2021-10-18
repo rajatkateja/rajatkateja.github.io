@@ -19,7 +19,7 @@ distributed file systems (and distributed systems in general).
 <figcaption>A figure from the chapter describing the high-level architecture 
 of a distributed file system. It consists of multiple clients that access 
 data over a network fom a centralized file server. The image shows that the 
-file server as a [RAID]({% post_url 2021-04-04-raid %}) array, 
+file server as a RAID array, 
 which although common, is not a necessity 
 for a distributed file system. </figcaption> </figure>
 

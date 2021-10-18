@@ -194,7 +194,7 @@ stale-cache problem.
 and three clients. The "File" originally contains some data which is represented by 
 its red color. 
 The color of the word "File" changing from red to purple shows that client A has updated 
-the file data. However, when client B reads that file, it still get the old file data 
+the file data. However, when client B reads that file, it still gets the old file data 
 because client A has cached its updates. This is referred to as the update-visibility problem. 
 Additionally, even after client A flushes its cache and updates the file on the server, 
 because client C had read and cached the file before this happened, it continues to 

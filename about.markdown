@@ -24,16 +24,15 @@ About</h1>
 <figure style="float:left;width:10%;padding:0px,0px,0px,0px;border:0px;margin-left:0px;margin-top:0px;margin-bottom:0px;">
   <img src="{{site.url}}/images/rkateja.png"/>
 </figure>
-Hi, I am Rajat Kateja!
+Hi, I am Rajat Kateja! I am a software engineer at Google. Prior to that, I graduated with a MS and PhD from Carnegie Mellon University 
+where I worked on non-volatile memory storage systems. Before that, I completed my BTech from IIT Guwahati in Mathematics and Computing. 
 </p>
 
-I am a software engineer at Google. Prior to that, I graduated with a MS and PhD from CMU. Even before that, I completed my BTech from IIT Guwahati. 
+One of my favourite things in grad school was reading papers, synthesizing them, thinking about how they are related, and writing about them (I loved writing the related works sections!) I started this blog to try and keep up the habit of reading and writing about computer systems research.
 
-One of my favourite things in grad school was reading papers, synthesizing them, thinking about how they are related, and writing about them (I loved writing the related works sections!) I started this blog/website to try and keep up the habit of reading and writing, and hopefully learn new things. 
-
-If you like what you read here and/or want to share your thoughts on a paper, consider 
-<a href="https://groups.google.com/g/afterhoursacademic-subscribers">subscribing</a> or 
-following me on <a href="http://twitter.com/rajatkateja">twitter</a> or <a href="http://linkedin.com/in/rajatkateja">linkedIn</a>
+If you like what you read here and/or want to share your thoughts on a topic,
+<a href="https://groups.google.com/g/afterhoursacademic-subscribers">subscribe to the AHAdemic google group</a>. 
+Alternatively, you can follow me on <a href="http://twitter.com/rajatkateja">twitter</a> or <a href="http://linkedin.com/in/rajatkateja">linkedIn</a>
 to get notified of new posts (typically once a week).
 
 

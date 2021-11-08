@@ -33,7 +33,7 @@ One of my favourite things in grad school was reading papers, synthesizing them,
 
 If you like what you read here and/or want to share your thoughts on a paper, consider 
 <a href="https://groups.google.com/g/afterhoursacademic-subscribers">subscribing</a> or 
-following me on <a href="http://twitter.com/rajatkateja">Twitter</a> or <a href="http://linkedin.com/in/rajatkateja">LinkedIn</a>
+following me on <a href="http://twitter.com/rajatkateja">twitter</a> or <a href="http://linkedin.com/in/rajatkateja">linkedIn</a>
 to get notified of new posts (typically once a week).
 
 

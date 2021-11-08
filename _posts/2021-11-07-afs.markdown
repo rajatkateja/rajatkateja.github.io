@@ -13,8 +13,8 @@ by Howard et al. was published in ACM Transactions on Computer Systems in 1988.
 The paper describes the Andrew File System (AFS). AFS is a distributed file
 system which was developed at Carnegie Mellon University (CMU) to support its
 users but went on to become widely used at many other universities and
-organizations (and it is still used at CMU :)). AFS was a contemporary to NFS
-but focussed more on scale, which led to fundamentally different design
+organizations (and it is still used at CMU :)). AFS was a contemporary of NFS
+but focused more on scale, which led to fundamentally different design
 choices, e.g., in caching. 
 
 **Basic architecture**: AFS consists of a set of file servers that store the shared
@@ -41,7 +41,7 @@ of writing the paper. Distributed file systems with block-level caching provide
 lower-latency access to a file because they don’t have to read an entire file
 before an application can access the file. On the flip side, file-level caching
 provides higher throughput access to the file data for applications that access
-multiple blocks in the file because there is only a single network
+multiple blocks in the file. This is because there is only a single network
 communication at the time of the file open. Reduced communications to the
 server also help with scaling, as the server is less utilized, which was one of
 the main goals of AFS.
@@ -56,7 +56,7 @@ In the AFS prototype, each Venus client had a corresponding process in the Vice
 server. The process was initialized and terminated when the client initiated
 and terminated a network connection with a Vice server. The
 one-process-per-client design offered strong fault isolation -- a process crash
-would only affect only a single client. However, the design caused Vice servers
+would affect only a single client. However, the design caused Vice servers
 to hit resource limits (there are limits to the number of processes that a
 server can support). Additionally, the inter-process context switch overhead
 was a limiting factor for the server performance. 
@@ -108,15 +108,15 @@ To improve the operability, AFS introduced the concept of _volumes_. A volume wa
 a logical abstraction for a collection of files and directories, and typically
 a volume stored data for a single user. AFS also started using a dedicated location
 database to avoid embedding the volume location information in the file system
-tree. The use of volumes made the location database of a manageable
+tree. The use of volumes helped in keeping the location database to a manageable
 size (storing the location of each file, instead of each volume, would have
-required more space). It also provided a way to enforce per-user space quotas
-and an abstraction for the granularity at which to create backups and read-only
-replicas. 
+required more space). 
+Volumes also served as the granularity for other data management
+functionalities like per-user space quotas, backups and read-only replication.
 
 **Reducing path lookup overhead**:
 The last source of performance overhead, as observed in the AFS prototype, was
-the use of file-paths for server client communications. For any operation on a
+the use of file-paths for server-client communications. For any operation on a
 file, Venus passed the entire filename to the Vice server and it was the
 responsibility of the Vice server to convert the file path to an inode number for
 accessing the file data. Measurements with the prototype deployment showed that
@@ -126,7 +126,7 @@ the Vice servers.
 In the new AFS design, the name resolution work was delegated to the clients,
 and server-client communications used a _fid_ instead of a file path. A fid is a
 combination of the volume number, vnode number and generation number. Each of
-these three components of fid server a purpose similar to the file handle in
+these three components of fid serve a purpose similar to the file handle in
 [NFS]({% post_url 2021-10-17-nfs %}). 
 The volume number is used to identify the server hosting the data (using
 the location database), the vnode is used to identify a file within the volume,
@@ -139,20 +139,20 @@ The vnode contains a pointer to the inode, which is ultimately used for the file
 **End-to-end working example**: The paper provides an example of the end-to-end
 working of an AFS file access. Suppose a user on a Venus client wants to access
 a file with pathname ```/user/aha/afs.txt```. The kernel, upon identifying that the
-file belongs to an AFS file system will pass the control to Venus. One of
+file belongs to an AFS, will pass the control to Venus. One of
 Venus’ threads would perform the following steps:
 
 - For each successive component in the path P (i.e., for ```/```, ```/user```, 
 ```/user/aha/```, and ```/user/aha/afs.txt```), 
 Venus will check that the component is in the cache
-and has a callback established on it. If either of these two is not true for
-any component, Venus would contact the Vice server to make sure that this is
-the case. After this step, the entire path and the file are in the cache with
+and has a callback established on it. If not, Venus would contact the Vice
+server to bring the component in the cache and establish a callback on it.
+After this step, the entire path and the file are in the cache with
 established callbacks.  
 - Venus hands over control to the kernel and user’s access to the
 file continues as if the file was present on a local file system.  
 - Once the
-user closes the file, Venus takes over once again and writes back the file is it 
+user closes the file, Venus takes over once again and writes back the file if it 
 was updated. 
 
 Note that Venus uses fid instead of path names to communicate with the Vice
@@ -168,7 +168,7 @@ has been updated. This is referred to as the server breaking the callback. The
 responsibility of getting the updated copy of the file is left to the client. 
 
 If two clients are concurrently updating the same file, AFS offers a _last
-writer wins_ semantic. Suppose that client A and client B are both updating the
+writer wins_ semantic. Suppose client A and client B are both updating the
 same file. Consider that client A closes the file first and flushes its updates
 to the server. The server would send a callback break to client B. Further
 consider that for some reason, client B ignores the callback break and

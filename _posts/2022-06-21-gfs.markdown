@@ -43,6 +43,6 @@ having detailed logs were useful in debugging bugs in the distributed
 system. 
 
 That's a wrap. There are obviously other interesting design ideas and 
-insights from the GFS papes and many of them have widely used now. 
+insights from the GFS paper and many of them are widely used now. 
 The above is just a collection of my favourite takeaways from reading 
 the paper after a long time. 

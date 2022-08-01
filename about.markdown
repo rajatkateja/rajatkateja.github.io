@@ -24,11 +24,11 @@ About</h1>
 <figure style="float:left;width:10%;padding:0px,0px,0px,0px;border:0px;margin-left:0px;margin-top:0px;margin-bottom:0px;">
   <img src="{{site.url}}/images/rkateja.png"/>
 </figure>
-Hi, I am Rajat Kateja! I am a software engineer at Google. Prior to that, I graduated with a MS and PhD from Carnegie Mellon University 
-where I worked on non-volatile memory storage systems. Before that, I completed my BTech from IIT Guwahati in Mathematics and Computing. 
+Hi, I am Rajat Kateja! I am a member of technical staff at <a href="https://alcion.ai">Alcion</a>. 
+I have a PhD from Carnegie Mellon University and my favourite part in grad school was reading and 
+synthesizing papers and writing related works sections. This blog is an attempt to 
+keep up the habit of reading and writing about computer systems research.
 </p>
-
-One of my favourite things in grad school was reading papers, synthesizing them, thinking about how they are related, and writing about them (I loved writing the related works sections!) I started this blog to try and keep up the habit of reading and writing about computer systems research.
 
 If you like what you read here and/or want to share your thoughts on a topic,
 <a href="https://groups.google.com/g/afterhoursacademic-subscribers">subscribe to the AHAdemic google group</a>. 
